@@ -1,1 +1,158 @@
-function debounce(t,n,e){let i;return function(){const o=this,a=arguments,c=function(){i=null,e||t.apply(o,a)},s=e&&!i;clearTimeout(i),i=setTimeout(c,n),s&&t.apply(o,a)}}function throttle(t,n,e){let i,o,a,c=0;e||(e={});const s=function(){c=!1===e.leading?0:(new Date).getTime(),i=null,t.apply(o,a),i||(o=a=null)};return function(){const l=(new Date).getTime();c||!1!==e.leading||(c=l);const r=n-(l-c);o=this,a=arguments,r<=0||r>n?(i&&(clearTimeout(i),i=null),c=l,t.apply(o,a),i||(o=a=null)):i||!1===e.trailing||(i=setTimeout(s,r))}}function sidebarPaddingR(){const t=window.innerWidth,n=document.body.clientWidth,e=t-n;t!==n&&$("body").css("padding-right",e)}function isIpad(){return"MacIntel"===navigator.platform&&navigator.maxTouchPoints>1}function isTMobile(){const t=navigator.userAgent;return window.screen.width<992&&/iPad|iPhone|iPod|Android|Opera Mini|BlackBerry|webOS|UCWEB|Blazer|PSP|IEMobile|Symbian/g.test(t)}function isMobile(){return this.isIpad()||this.isTMobile()}function isDesktop(){return!this.isMobile()}function scrollToDest(t,n=0){const e=$(t).offset();$("body,html").animate({scrollTop:e.top-n})}function loadScript(t,n){const e=document.createElement("script");e.type="text/javascript",e.readyState?e.onreadystatechange=function(){"loaded"!==e.readyState&&"complete"!==e.readyState||(e.onreadystatechange=null,n())}:e.onload=function(){n()},e.src=t,document.body.appendChild(e)}function snackbarShow(t,n,e){const i=void 0!==n&&n,o=void 0!==e?e:2e3,a=GLOBAL_CONFIG.Snackbar.position,c="light"===document.documentElement.getAttribute("data-theme")?GLOBAL_CONFIG.Snackbar.bgLight:GLOBAL_CONFIG.Snackbar.bgDark;Snackbar.show({text:t,backgroundColor:c,showAction:i,duration:o,pos:a})}const Cookies={get:function(t){const n=`; ${document.cookie}`.split(`; ${t}=`);if(2===n.length)return n.pop().split(";").shift()},set:function(t,n,e){let i="";if(e){const t=new Date;t.setTime(t.getTime()+24*e*60*60*1e3),i="; expires="+t.toUTCString()}document.cookie=t+"="+(n||"")+i+"; path=/"}},initJustifiedGallery=function(t){t.each((function(t,n){$(this).is(":visible")&&$(this).justifiedGallery({rowHeight:220,margins:4})}))};GLOBAL_CONFIG.islazyload&&(window.lazyLoadOptions={elements_selector:"img",threshold:0});
+/* eslint-disable no-unused-vars */
+
+function debounce (func, wait, immediate) {
+  let timeout
+  return function () {
+    const context = this
+    const args = arguments
+    const later = function () {
+      timeout = null
+      if (!immediate) func.apply(context, args)
+    }
+    const callNow = immediate && !timeout
+    clearTimeout(timeout)
+    timeout = setTimeout(later, wait)
+    if (callNow) func.apply(context, args)
+  }
+};
+
+function throttle (func, wait, options) {
+  let timeout, context, args
+  let previous = 0
+  if (!options) options = {}
+
+  const later = function () {
+    previous = options.leading === false ? 0 : new Date().getTime()
+    timeout = null
+    func.apply(context, args)
+    if (!timeout) context = args = null
+  }
+
+  const throttled = function () {
+    const now = new Date().getTime()
+    if (!previous && options.leading === false) previous = now
+    const remaining = wait - (now - previous)
+    context = this
+    args = arguments
+    if (remaining <= 0 || remaining > wait) {
+      if (timeout) {
+        clearTimeout(timeout)
+        timeout = null
+      }
+      previous = now
+      func.apply(context, args)
+      if (!timeout) context = args = null
+    } else if (!timeout && options.trailing !== false) {
+      timeout = setTimeout(later, remaining)
+    }
+  }
+
+  return throttled
+}
+
+function sidebarPaddingR () {
+  const innerWidth = window.innerWidth
+  const clientWidth = document.body.clientWidth
+  const paddingRight = innerWidth - clientWidth
+  if (innerWidth !== clientWidth) {
+    $('body').css('padding-right', paddingRight)
+  }
+}
+
+// iPadOS
+function isIpad () {
+  return navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1
+}
+
+function isTMobile () {
+  const ua = navigator.userAgent
+  const pa = /iPad|iPhone|iPod|Android|Opera Mini|BlackBerry|webOS|UCWEB|Blazer|PSP|IEMobile|Symbian/g
+  return window.screen.width < 992 && pa.test(ua)
+}
+
+function isMobile () {
+  return this.isIpad() || this.isTMobile()
+}
+
+function isDesktop () {
+  return !this.isMobile()
+}
+
+function scrollToDest (name, offset = 0) {
+  const scrollOffset = $(name).offset()
+  $('body,html').animate({
+    scrollTop: scrollOffset.top - offset
+  })
+};
+
+function loadScript (url, callback) {
+  const script = document.createElement('script')
+  script.type = 'text/javascript'
+  if (script.readyState) { // IE
+    script.onreadystatechange = function () {
+      if (script.readyState === 'loaded' ||
+        script.readyState === 'complete') {
+        script.onreadystatechange = null
+        callback()
+      }
+    }
+  } else { // Others
+    script.onload = function () {
+      callback()
+    }
+  }
+  script.src = url
+  document.body.appendChild(script)
+};
+
+function snackbarShow (text, showAction, duration) {
+  const sa = (typeof showAction !== 'undefined') ? showAction : false
+  const dur = (typeof duration !== 'undefined') ? duration : 2000
+  const position = GLOBAL_CONFIG.Snackbar.position
+  const bg = document.documentElement.getAttribute('data-theme') === 'light' ? GLOBAL_CONFIG.Snackbar.bgLight : GLOBAL_CONFIG.Snackbar.bgDark
+  Snackbar.show({
+    text: text,
+    backgroundColor: bg,
+    showAction: sa,
+    duration: dur,
+    pos: position
+  })
+}
+
+const Cookies = {
+  get: function (name) {
+    const value = `; ${document.cookie}`
+    const parts = value.split(`; ${name}=`)
+    if (parts.length === 2) return parts.pop().split(';').shift()
+  },
+  set: function (name, value, days) {
+    let expires = ''
+    if (days) {
+      const date = new Date()
+      date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000))
+      expires = '; expires=' + date.toUTCString()
+    }
+    document.cookie = name + '=' + (value || '') + expires + '; path=/'
+  }
+}
+
+const initJustifiedGallery = function (selector) {
+  selector.each(function (i, o) {
+    if ($(this).is(':visible')) {
+      $(this).justifiedGallery({
+        rowHeight: 220,
+        margins: 4
+      })
+    }
+  })
+}
+
+/**
+ * lazyload
+ */
+if (GLOBAL_CONFIG.islazyload) {
+  window.lazyLoadOptions = {
+    elements_selector: 'img',
+    threshold: 0
+  }
+}
