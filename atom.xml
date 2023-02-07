@@ -6,7 +6,7 @@
   <link href="http://xpssssss.github.io/atom.xml" rel="self"/>
   
   <link href="http://xpssssss.github.io/"/>
-  <updated>2023-01-31T09:07:48.520Z</updated>
+  <updated>2023-02-07T03:56:36.418Z</updated>
   <id>http://xpssssss.github.io/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="http://xpssssss.github.io/posts/0/"/>
+    <id>http://xpssssss.github.io/posts/0/</id>
+    <published>2023-02-07T03:55:57.889Z</published>
+    <updated>2023-02-07T03:56:36.418Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p><img src= "/img/loading.gif" data-src="/%E7%AD%94%E7%96%91%E6%B5%8B%E8%AF%95/3NQ7GAYCM4.jpeg" alt="img"></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">#编写一个函数Fib),带一个整数参数n,输出是Fibonacc1数列的第n项。</span><br><span class="line">def fib(n):</span><br><span class="line">      1i=0</span><br><span class="line">      if n==1 or n==2:</span><br><span class="line">          return 1</span><br><span class="line">       else:</span><br><span class="line">           return fib(n-1)+fib(n-2)</span><br></pre></td></tr></table></figure><p>试输出Fib(1000)。</p><p>1.发现结果不返回，原因是</p><p>使用字典重新定义fib函数，字典中每一个元素是一个键值对，其中键是整数n,值是其对应的fib(n)。  n：fib(n)</p><p>a.函数中当需要某值时，优先在字典中执行查找，若不存在再计算，并且把计算结果写入字典。</p><p>b.这个思想称为：用空间换时间。</p><p>实验：设计新的函数Fibdt(n),并输出Fibdt(1000)的值。</p><h1 id="使用字典加速函数返回"><a href="#使用字典加速函数返回" class="headerlink" title="使用字典加速函数返回"></a>使用字典加速函数返回</h1><p><img src= "/img/loading.gif" data-src="/%E7%AD%94%E7%96%91%E6%B5%8B%E8%AF%95/ORSPGAYARA.png" alt="img"></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">d = &#123;1:1, 2:1&#125;</span><br><span class="line">def fibdt(n):</span><br><span class="line">    if n in d:</span><br><span class="line">        return d[n]</span><br><span class="line">    else:</span><br><span class="line">        d[n] = fibdt(n-1) + fibdt(n-2)</span><br><span class="line">        return d[n]</span><br><span class="line">print(fibdt(1000))</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">def fib(n):</span><br><span class="line">    li=0</span><br><span class="line">    if n == 1 or n == 2:</span><br><span class="line">        return 1</span><br><span class="line">    else:</span><br><span class="line">        return fib(n-1) + fib(n-2)</span><br><span class="line">def Fibdt(n, memo=&#123;&#125;):</span><br><span class="line">    if n in memo:</span><br><span class="line">        return memo[n]</span><br><span class="line">    else:</span><br><span class="line">        memo[n] = fib(n)</span><br><span class="line">        return memo[n]</span><br><span class="line">print(Fibdt(1000))</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>我和你</title>
