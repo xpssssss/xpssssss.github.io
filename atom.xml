@@ -6,7 +6,7 @@
   <link href="http://xpssssss.github.io/atom.xml" rel="self"/>
   
   <link href="http://xpssssss.github.io/"/>
-  <updated>2023-02-07T16:21:48.782Z</updated>
+  <updated>2023-02-08T08:22:34.086Z</updated>
   <id>http://xpssssss.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
-    <link href="http://xpssssss.github.io/posts/0/"/>
-    <id>http://xpssssss.github.io/posts/0/</id>
+    <title>python个人学习路线总结</title>
+    <link href="http://xpssssss.github.io/posts/520520/"/>
+    <id>http://xpssssss.github.io/posts/520520/</id>
     <published>2023-02-08T08:15:53.850Z</published>
-    <updated>2023-02-07T16:21:48.782Z</updated>
+    <updated>2023-02-08T08:22:34.086Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>官方文旦<a href="https://docs.python.org/zh-cn/3/tutorial/index.html">https://docs.python.org/zh-cn/3/tutorial/index.html</a></p><p>﻿CSDN平台粉丝已经十二万多了，以下是我自己的学习路线，至少是我目前能回忆起来的一些学习路线，希望能帮到你们。</p><h2 id="一、python基础"><a href="#一、python基础" class="headerlink" title="一、python基础"></a>一、python基础</h2><table><thead><tr><th>基础</th></tr></thead><tbody><tr><td>环境搭建</td></tr><tr><td>注释</td></tr><tr><td>变量</td></tr><tr><td>数据类型</td></tr><tr><td>数学计算</td></tr><tr><td>字符串</td></tr><tr><td>布尔值</td></tr><tr><td>列表</td></tr><tr><td>元组</td></tr><tr><td>集合</td></tr><tr><td>字典</td></tr><tr><td>控制流</td></tr><tr><td>函数</td></tr><tr><td>面向对象</td></tr><tr><td>继承</td></tr><tr><td>日期</td></tr><tr><td>JSON数据处理</td></tr><tr><td>格式化输入输出</td></tr><tr><td>警告处理</td></tr><tr><td>文件的基本处理</td></tr></tbody></table><h2 id="二、数据处理"><a href="#二、数据处理" class="headerlink" title="二、数据处理"></a>二、数据处理</h2><p>需要掌握的模块：</p><table><thead><tr><th>模块</th></tr></thead><tbody><tr><td>pandas</td></tr><tr><td>numpy</td></tr></tbody></table><h2 id="三、数据可视化"><a href="#三、数据可视化" class="headerlink" title="三、数据可视化"></a>三、数据可视化</h2><p>以下是常见需要绘制的图形，是需要掌握的：</p><table><thead><tr><th>内容</th></tr></thead><tbody><tr><td>子图</td></tr><tr><td>散点图</td></tr><tr><td>折线图</td></tr><tr><td>柱形图</td></tr><tr><td>直方图</td></tr><tr><td>扇形图</td></tr><tr><td>K线图</td></tr><tr><td>箱型图</td></tr><tr><td>热力图</td></tr><tr><td>省市地图</td></tr><tr><td>水球图</td></tr></tbody></table><p>个人建议需要掌握的模块：</p><table><thead><tr><th>模块</th></tr></thead><tbody><tr><td>Matplotlib</td></tr><tr><td>Seaborn</td></tr><tr><td>Pyechart</td></tr></tbody></table><h2 id="五、网页基础与网络爬虫"><a href="#五、网页基础与网络爬虫" class="headerlink" title="五、网页基础与网络爬虫"></a>五、网页基础与网络爬虫</h2><p>需要掌握的网页基础内容：</p><table><thead><tr><th>内容</th></tr></thead><tbody><tr><td>HTML</td></tr><tr><td>CSS</td></tr><tr><td>JS</td></tr></tbody></table><p>需要掌握的网络爬虫内容：</p><table><thead><tr><th>基本模块</th></tr></thead><tbody><tr><td>urllib</td></tr><tr><td>requests</td></tr><tr><td>re</td></tr><tr><td>Xpath</td></tr><tr><td>bs4</td></tr><tr><td>selenium</td></tr><tr><td>Scrapy</td></tr></tbody></table><h2 id="六、Web开发"><a href="#六、Web开发" class="headerlink" title="六、Web开发"></a>六、Web开发</h2><p>web开发也是主要的一个内容，基于前面的网页基础，建议至少需要掌握一下其中一种：</p><table><thead><tr><th>建议掌握一种</th></tr></thead><tbody><tr><td>Flask</td></tr><tr><td>Django</td></tr></tbody></table><h2 id="六、数据与服务器的管理"><a href="#六、数据与服务器的管理" class="headerlink" title="六、数据与服务器的管理"></a>六、数据与服务器的管理</h2><p>至少需要掌握的内容：</p><table><thead><tr><th>需要掌握</th></tr></thead><tbody><tr><td>SQL</td></tr><tr><td>Linux</td></tr></tbody></table><h2 id="七、机器学习十大基本算法"><a href="#七、机器学习十大基本算法" class="headerlink" title="七、机器学习十大基本算法"></a>七、机器学习十大基本算法</h2><p>以下是我脑子能想到比较常见的又还会的，不分顺序：</p><table><thead><tr><th>算法</th></tr></thead><tbody><tr><td>线性回归</td></tr><tr><td>Logistic 回归</td></tr><tr><td>逐步回归</td></tr><tr><td>正则化（岭回归）</td></tr><tr><td>决策树</td></tr><tr><td>朴素贝叶斯</td></tr><tr><td>k-邻近算法（kNN）</td></tr><tr><td>Kmeans聚类</td></tr><tr><td>支持向量机（SVM）</td></tr><tr><td>随机森林(Random Forest)</td></tr><tr><td>主成份分析</td></tr><tr><td>主成分回归（PCR）</td></tr><tr><td>灰色关联</td></tr><tr><td>皮尔逊相关性</td></tr><tr><td>特征选择算法</td></tr><tr><td>XGBoost算法</td></tr><tr><td>LSTM模型</td></tr><tr><td>ARMA模型</td></tr><tr><td>神经网络</td></tr></tbody></table><p>如果有时间，希望把西瓜书啃一遍。关于机器学习算法，可以使用Python和Matlab。哪样方便哪样来，本篇主要是介绍的Python，暑假我会更新一套完整的Matlab教程。</p><h2 id="八、最后几句话"><a href="#八、最后几句话" class="headerlink" title="八、最后几句话"></a>八、最后几句话</h2><p>学习的过程不是一帆风顺的，一定要坚持。数据挖掘工程师在国内是很缺少的，自己打开招聘看看就知道了，对于有经验的数据工程师，至少都是两万起步，基本都能达到三万，这仅仅是公司的基本工资，如果还有股权，以及自己外快，具体自己算（不过要慢慢积累，不是说毕业就这么厉害了）。以上是我个人所学知识，但是对这些掌握也不能说是完全掌握，所以准备是要复习一遍。</p><p>对于学生，接触数据挖掘最多的应该就是大学期间的各种数学建模竞赛了，挑战性很强。最后说一句，不是你拿奖了，就代表你有这个实力了，不是说你没拿奖，就代表你没有这个实力了，数学建模竞赛，老玩家懂的都懂了，所以我就不直言。但是这个竞赛，我就把它定义为数据挖掘了。</p><p>关于一对一指导与教学部分，如果需要欢迎联系：<br><img src= "/img/loading.gif" data-src="https://img-blog.csdnimg.cn/2b2425d9714b468babb99992ba95cece.jpeg" alt="在这里插入图片描述"></p>]]></content>
     
@@ -33,15 +33,21 @@
     
     
     
+    <category term="blog" scheme="http://xpssssss.github.io/categories/blog/"/>
+    
+    
+    <category term="总结" scheme="http://xpssssss.github.io/tags/%E6%80%BB%E7%BB%93/"/>
+    
+    <category term="业务" scheme="http://xpssssss.github.io/tags/%E4%B8%9A%E5%8A%A1/"/>
     
   </entry>
   
   <entry>
-    <title></title>
-    <link href="http://xpssssss.github.io/posts/0/"/>
-    <id>http://xpssssss.github.io/posts/0/</id>
+    <title>答疑模板——付费就会这样答疑</title>
+    <link href="http://xpssssss.github.io/posts/520520/"/>
+    <id>http://xpssssss.github.io/posts/520520/</id>
     <published>2023-02-07T03:55:57.889Z</published>
-    <updated>2023-02-07T03:57:10.972Z</updated>
+    <updated>2023-02-08T08:21:51.888Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p><img src= "/img/loading.gif" data-src="/%E7%AD%94%E7%96%91%E6%B5%8B%E8%AF%95/3NQ7GAYCM4.jpeg" alt="img"></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">#编写一个函数Fib),带一个整数参数n,输出是Fibonacc1数列的第n项。</span><br><span class="line">def fib(n):</span><br><span class="line">      1i=0</span><br><span class="line">      if n==1 or n==2:</span><br><span class="line">          return 1</span><br><span class="line">       else:</span><br><span class="line">           return fib(n-1)+fib(n-2)</span><br></pre></td></tr></table></figure><p>试输出Fib(1000)。</p><p>1.发现结果不返回，原因是</p><p>使用字典重新定义fib函数，字典中每一个元素是一个键值对，其中键是整数n,值是其对应的fib(n)。  n：fib(n)</p><p>a.函数中当需要某值时，优先在字典中执行查找，若不存在再计算，并且把计算结果写入字典。</p><p>b.这个思想称为：用空间换时间。</p><p>实验：设计新的函数Fibdt(n),并输出Fibdt(1000)的值。</p><h1 id="使用字典加速函数返回"><a href="#使用字典加速函数返回" class="headerlink" title="使用字典加速函数返回"></a>使用字典加速函数返回</h1><p><img src= "/img/loading.gif" data-src="/%E7%AD%94%E7%96%91%E6%B5%8B%E8%AF%95/ORSPGAYARA.png" alt="img"></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">d = &#123;1:1, 2:1&#125;</span><br><span class="line">def fibdt(n):</span><br><span class="line">    if n in d:</span><br><span class="line">        return d[n]</span><br><span class="line">    else:</span><br><span class="line">        d[n] = fibdt(n-1) + fibdt(n-2)</span><br><span class="line">        return d[n]</span><br><span class="line">print(fibdt(1000))</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">def fib(n):</span><br><span class="line">    li=0</span><br><span class="line">    if n == 1 or n == 2:</span><br><span class="line">        return 1</span><br><span class="line">    else:</span><br><span class="line">        return fib(n-1) + fib(n-2)</span><br><span class="line">def Fibdt(n, memo=&#123;&#125;):</span><br><span class="line">    if n in memo:</span><br><span class="line">        return memo[n]</span><br><span class="line">    else:</span><br><span class="line">        memo[n] = fib(n)</span><br><span class="line">        return memo[n]</span><br><span class="line">print(Fibdt(1000))</span><br></pre></td></tr></table></figure>]]></content>
     
@@ -53,6 +59,12 @@
     
     
     
+    <category term="blog" scheme="http://xpssssss.github.io/categories/blog/"/>
+    
+    
+    <category term="总结" scheme="http://xpssssss.github.io/tags/%E6%80%BB%E7%BB%93/"/>
+    
+    <category term="业务" scheme="http://xpssssss.github.io/tags/%E4%B8%9A%E5%8A%A1/"/>
     
   </entry>
   
@@ -61,7 +73,7 @@
     <link href="http://xpssssss.github.io/posts/520520/"/>
     <id>http://xpssssss.github.io/posts/520520/</id>
     <published>2023-01-31T09:03:00.973Z</published>
-    <updated>2023-01-31T09:07:48.520Z</updated>
+    <updated>2023-02-08T08:22:05.461Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>我愿意一生守在你的身边，冬天做你的棉被，夏天做你的。</p><p><img src= "/img/loading.gif" data-src="/%E6%88%91%E5%92%8C%E4%BD%A0/9c0e55754c5711f6cca3e5d926c32c7.jpg" alt="9c0e55754c5711f6cca3e5d926c32c7"></p>]]></content>
     
