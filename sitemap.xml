@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://xpssssss.github.io/posts/520520/</loc>
+    <loc>http://xpssssss.github.io/posts/520530/</loc>
     
     <lastmod>2023-02-08</lastmod>
     
@@ -56,6 +56,15 @@
   </url>
   
   <url>
+    <loc>http://xpssssss.github.io/bangumis/index.html</loc>
+    
+    <lastmod>2023-01-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://xpssssss.github.io/books/index.html</loc>
     
     <lastmod>2023-01-28</lastmod>
@@ -66,15 +75,6 @@
   
   <url>
     <loc>http://xpssssss.github.io/categories/index.html</loc>
-    
-    <lastmod>2023-01-28</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://xpssssss.github.io/bangumis/index.html</loc>
     
     <lastmod>2023-01-28</lastmod>
     
@@ -119,7 +119,7 @@
   </url>
   
   <url>
-    <loc>http://xpssssss.github.io/talk/index.html</loc>
+    <loc>http://xpssssss.github.io/tags/index.html</loc>
     
     <lastmod>2023-01-28</lastmod>
     
@@ -128,7 +128,7 @@
   </url>
   
   <url>
-    <loc>http://xpssssss.github.io/tags/index.html</loc>
+    <loc>http://xpssssss.github.io/talk/index.html</loc>
     
     <lastmod>2023-01-28</lastmod>
     
