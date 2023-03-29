@@ -74,7 +74,7 @@
   </url>
   
   <url>
-    <loc>http://xpssssss.github.io/books/index.html</loc>
+    <loc>http://xpssssss.github.io/categories/index.html</loc>
     
     <lastmod>2023-01-28</lastmod>
     
@@ -83,7 +83,7 @@
   </url>
   
   <url>
-    <loc>http://xpssssss.github.io/categories/index.html</loc>
+    <loc>http://xpssssss.github.io/books/index.html</loc>
     
     <lastmod>2023-01-28</lastmod>
     
@@ -101,25 +101,16 @@
   </url>
   
   <url>
-    <loc>http://xpssssss.github.io/link/index.html</loc>
-    
-    <lastmod>2023-01-28</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://xpssssss.github.io/music/index.html</loc>
-    
-    <lastmod>2023-01-28</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://xpssssss.github.io/movies/index.html</loc>
+    
+    <lastmod>2023-01-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://xpssssss.github.io/link/index.html</loc>
     
     <lastmod>2023-01-28</lastmod>
     
@@ -138,6 +129,15 @@
   
   <url>
     <loc>http://xpssssss.github.io/talk/index.html</loc>
+    
+    <lastmod>2023-01-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://xpssssss.github.io/music/index.html</loc>
     
     <lastmod>2023-01-28</lastmod>
     
