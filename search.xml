@@ -4,6 +4,45 @@
   
     
     <entry>
+      <title></title>
+      <link href="/posts/0/"/>
+      <url>/posts/0/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line">yum update -y 升级系统</span><br><span class="line">dns配置:172.28.53.53</span><br><span class="line">lsblk  查看磁盘</span><br><span class="line">curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun      安装docker</span><br><span class="line">systemctl start docker  开启docker</span><br><span class="line">systemctl status docker  docker是否运行</span><br><span class="line">cat dwf-camunda-20220904.tar.gz | docker import - dwf-camunda-20220904   上载本地dwf镜像，后面的是自己的名字</span><br><span class="line">docker load --input dwf-camunda-20220904.tar.gz  装载上载好的dwf本地镜像</span><br><span class="line">cat pg_fdw_20220809.tar.gz | docker import - pg_fdw_20220809  上载pg数据库</span><br><span class="line">docker load --input pg_fdw_20220809.tar.gz  装载pg数据库</span><br><span class="line">docker images 查看镜像</span><br><span class="line">sudo curl -L https://get.daocloud.io/docker/compose/releases/download/1.25.1/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose    安装docker compose</span><br><span class="line">将原始yml放入任意文件夹</span><br><span class="line">chmod +x /usr/local/bin/docker-compose  给compose权限</span><br><span class="line"></span><br><span class="line">docker-compose -f docker-compose.yml up -d postgres</span><br><span class="line">docker-compose -f docker-compose.yml up dwf-init</span><br><span class="line">docker-compose -f docker-compose.yml up -d dwf</span><br><span class="line">在任意文件夹中分别运行</span><br><span class="line">docker logs dwf </span><br><span class="line">检查dwf运行</span><br><span class="line">df -h</span><br><span class="line">查看文件夹占用空间</span><br><span class="line">fdisk -l</span><br><span class="line">查看文件夹</span><br><span class="line">chmod +x jiaobenwenjian</span><br><span class="line">给脚本权限</span><br><span class="line">jiaobenwenjian</span><br><span class="line">运行脚本</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">重启方法</span><br><span class="line">关机后</span><br><span class="line">systemctl start docker</span><br><span class="line">开启docker</span><br><span class="line">docker start $(docker ps -a | awk &#x27;&#123; print $1&#125;&#x27; | tail -n +2)</span><br><span class="line">一键开启所有容器</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">curl -fsSL https:``//get.docker.com | bash -s docker --mirror Aliyun</span><br></pre></td></tr></table></figure><p>curl: (6) Could not resolve host: get.docker.com; Unknown error</p><p>这个错误通常是由于 DNS 无法解析主机名 <code>get.docker.com</code> 导致的。可能的原因包括网络故障、DNS 配置错误或防火墙设置等</p><h1 id="docker重装–拉去镜像"><a href="#docker重装–拉去镜像" class="headerlink" title="docker重装–拉去镜像"></a>docker重装–拉去镜像</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"># 删除docker服务</span><br><span class="line"></span><br><span class="line">sudo yum remove docker \</span><br><span class="line">                  docker-client \</span><br><span class="line">                  docker-client-latest \</span><br><span class="line">                  docker-common \</span><br><span class="line">                  docker-latest \</span><br><span class="line">                  docker-latest-logrotate \</span><br><span class="line">                  docker-logrotate \</span><br><span class="line">                  docker-engine</span><br></pre></td></tr></table></figure><p>安装：</p><p>1、在安装Docker之前先安装docker的依赖包</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install -y yum-utils</span><br><span class="line">Package yum-utils-1.1.31-54.el7_8.noarch already installed and latest version</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>2、告诉linux,安装docker要从哪里安装</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo yum-config-manager \</span><br><span class="line">    --add-repo \</span><br><span class="line">    https://download.docker.com/linux/centos/docker-ce.repo</span><br></pre></td></tr></table></figure><p>3y安装docker（docker的引擎、操作docker的客户端、docker容器）</p><p>sudo yum install docker-ce docker-ce-cli containerd.io</p><p><img src= "/img/loading.gif" data-src="/image-20230329165014537.png" alt="image-20230329165014537"></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Error downloading packages:</span><br><span class="line">  containerd.io-1.6.19-3.1.el7.x86_64: [Errno 256] No more mirrors to try.</span><br><span class="line">  3:docker-ce-23.0.1-1.el7.x86_64: [Errno 256] No more mirrors to try.</span><br><span class="line">  docker-ce-rootless-extras-23.0.1-1.el7.x86_64: [Errno 256] No more mirrors to try.</span><br><span class="line">  2:container-selinux-2.119.2-1.911c772.el7_8.noarch: [Errno 256] No more mirrors to try.</span><br><span class="line">  1:docker-ce-cli-23.0.1-1.el7.x86_64: [Errno 256] No more mirrors to try.</span><br><span class="line"></span><br></pre></td></tr></table></figure><h1 id="conterion版本"><a href="#conterion版本" class="headerlink" title="conterion版本"></a>conterion版本</h1>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/posts/0/"/>
+      <url>/posts/0/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="你已加入！欢迎使用全新必应！"><a href="#你已加入！欢迎使用全新必应！" class="headerlink" title="你已加入！欢迎使用全新必应！"></a><strong>你已加入！欢迎使用全新必应！</strong></h1><h2 id="桌面版"><a href="#桌面版" class="headerlink" title="桌面版"></a>桌面版</h2><p>chathub实现</p><p>* 直接下载的地址：<a href="http://rrsp9azzr.bkt.clouddn.com/aihub-0.0.2.zip">http://rrsp9azzr.bkt.clouddn.com/aihub-0.0.2.zip</a><br>* 网盘的地址：<a href="https://115.com/s/sw6rrf23w3m?password=ufb2&#aihub">https://115.com/s/sw6rrf23w3m?password=ufb2&amp;#aihub</a></p><p>ai账号批发</p><p><a href="http://www.newbing.buzz/buy/1">【NewBing&#x2F;GPT-4】✨✨新必应✨✨提前享受 GPT-4✨✨开箱即用！👌无需等待！✋现成账号！🎉🎉| 🏧24h自动发货🎁🎁 | AI账号出售</a></p><p>描述</p><h1 id="安装文档"><a href="#安装文档" class="headerlink" title="安装文档"></a>安装文档</h1><p><a href="https://bx44mbsk7ya.feishu.cn/docx/MfcCdowQSo9eZRxsax7c0QlAnve">New Bing教程 - 飞书云文档 (feishu.cn)</a></p><p>修改hosts</p><p>如果打开失败的话，请使用新的hosts</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"># New Bing Chat</span><br><span class="line">52.187.10.5 bing.com</span><br><span class="line">52.187.10.5 www.bing.com </span><br><span class="line">52.187.10.5 r.bing.com</span><br><span class="line">52.187.10.5 edgeservices.bing.com</span><br><span class="line"></span><br><span class="line">\# New Bing Login</span><br><span class="line">40.126.35.80  login.microsoftonline.com</span><br><span class="line">20.190.163.18 login.live.com</span><br><span class="line">13.107.253.59 logincdn.msauth.net</span><br><span class="line">13.107.253.59 acctcdn.msauth.net</span><br><span class="line">13.107.253.59 acctcdn.msftauth.net</span><br><span class="line">13.107.253.59 lgincdnvzeuno.azureedge.net</span><br></pre></td></tr></table></figure><p><a href="https://blog.csdn.net/qq_40405705/article/details/105833420">https://blog.csdn.net/qq_40405705/article/details/105833420</a></p><p><a href="https://www.bing.com/search?form=MY0291&OCID=MY0291&q=Bing+AI&showconv=1">Bing AI - 搜索</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/posts/0/"/>
+      <url>/posts/0/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><blockquote><p>暗网丝绸之路相信大家都听过，但是对于我们国内的网民来说，中文的暗网交易市场总是不多！而我说的这个暗网交易市场是这个市场中对最大的一个，充斥着各种非法的资源信息、幼女视频和毒品枪支交易<br>暗网交易市场只收比特币，利用匿名的交易方式，不会暴露自身的信息，交易担保由平台承担</p><p><img src= "/img/loading.gif" data-src="/image-20230323175102077.png" alt="image-20230323175102077"></p><p><a href="https://bridges.torproject.org/options/">https://bridges.torproject.org/options/</a></p><p><a href="https://addons.mozilla.org/en-US/">https://addons.mozilla.org/en-US/</a> 隐藏ip</p><p>马金钱老师</p><p><a href="https://zh.wizcase.com/blog/%E5%B9%B4%E4%B8%AA%E6%9C%80%E4%BD%B3%E6%9A%97%E7%B6%B2%E9%93%BE%E6%8E%A5/#thehiddenwiki"><strong>The Hidden Wiki</strong></a></p><p><strong>找到所需的.onion网站的过程可能令人沮丧，甚至危险</strong>。这是因为暗网不受监管，并且.onion站点不会出现在Google搜索里。对于记者、民权倡导者和活动家来说，暗网有很大价值，非常有用，但它同时也是黑客和政府监视的避风港。更糟糕的是，看似安全的内容可能包含非法资料。</p><blockquote><h3 id="Wasabi-Wallet——匿名购买比特币"><a href="#Wasabi-Wallet——匿名购买比特币" class="headerlink" title="Wasabi Wallet——匿名购买比特币"></a>Wasabi Wallet——匿名购买比特币</h3><p>在过去的几年里，比特币在公众中越来越受欢迎，并且仍然是用于暗网交易的最常用的加密货币。</p><p><strong>Wasabi Wallet是匿名购买、出售和管理加密货币的最佳平台之一。</strong>其独特的钱包混合功能让用户可以将加密货币与其他用户的混在一起，从而使交易更难追踪。用户使用其.onion网站时，将保持私密，因为用户的所有数据在Tor网络上都将匿名处理。</p><p>为了更安全地管理暗网上的交易，它提供严格的安全性，例如DNS泄漏保护和自动终止开关（kill switch）。</p><p><strong>Wasabi Wallet：</strong><a href="https://wasabiukrxmkdgve5kynjztuovbg43uxcbcxn6y2okcrsg7gb6jdmbad.onion/">https://wasabiukrxmkdgve5kynjztuovbg43uxcbcxn6y2okcrsg7gb6jdmbad.onion</a></p><h3 id="Impreza-Hosting——暗网站点托管服务"><a href="#Impreza-Hosting——暗网站点托管服务" class="headerlink" title="Impreza Hosting——暗网站点托管服务"></a><strong>Impreza Hosting——暗网站点托管服务</strong></h3><p>哪怕是暗网上的站点，也需要某种托管，<strong>Impreza Hosting是建立自己的暗网网站并使其正常运行的最佳服务之</strong>一。不过，用户需要专业技术知识才能跟Impreza Hosting合作建立网站——用户可以租用它的服务器来运行网站、注册域名、托管电子邮件服务以及服务（如GoDaddy）在标准网络上所需的其他一切。</p><p><strong>Impreza Hosting：</strong><a href="https://v7avmdv2l6dio3cg.onion/">https://v7avmdv2l6dio3cg.onion/</a></p></blockquote><p><img src= "/img/loading.gif" data-src="/image-20230323172256398.png" alt="image-20230323172256398"></p><p><img src= "/img/loading.gif" data-src="/image-20230323172237038.png" alt="image-20230323172237038"></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">2023-03-23 07:51:02.189 [NOTICE] New control connection opened from 127.0.0.1.</span><br><span class="line">2023-03-23 07:51:02.194 [NOTICE] Closing no-longer-configured Socks listener on 127.0.0.1:9150</span><br><span class="line">2023-03-23 07:51:02.194 [NOTICE] DisableNetwork is set. Tor will not make or accept non-control network connections. Shutting down all existing connections.</span><br><span class="line">2023-03-23 07:51:03.105 [WARN] Pluggable Transport process terminated with status code 0</span><br><span class="line">2023-03-23 07:51:04.222 [NOTICE] Opening Socks listener on 127.0.0.1:9150</span><br><span class="line">2023-03-23 07:51:04.223 [NOTICE] Opened Socks listener connection (ready) on 127.0.0.1:9150</span><br><span class="line">2023-03-23 07:51:05.138 [NOTICE] Bootstrapped 1% (conn_pt): Connecting to pluggable transport</span><br><span class="line">2023-03-23 07:51:05.143 [NOTICE] Bootstrapped 2% (conn_done_pt): Connected to pluggable transport</span><br><span class="line">2023-03-23 07:51:05.145 [NOTICE] Bootstrapped 10% (conn_done): Connected to a relay</span><br><span class="line">2023-03-23 07:51:06.294 [NOTICE] Bootstrapped 14% (handshake): Handshaking with a relay</span><br><span class="line">2023-03-23 07:51:06.542 [NOTICE] New control connection opened from 127.0.0.1.</span><br><span class="line">2023-03-23 07:51:10.249 [NOTICE] Bootstrapped 15% (handshake_done): Handshake with a relay done</span><br><span class="line">2023-03-23 07:51:10.250 [NOTICE] Bootstrapped 75% (enough_dirinfo): Loaded enough directory info to build circuits</span><br><span class="line">2023-03-23 07:51:10.251 [NOTICE] Bootstrapped 95% (circuit_create): Establishing a Tor circuit</span><br></pre></td></tr></table></figure><p><a href="https://duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion/">https://duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion/</a></p><p><img src= "/img/loading.gif" data-src="/image-20230323172418158.png" alt="image-20230323172418158"></p><p><img src= "/img/loading.gif" data-src="/image-20230323173547943.png" alt="image-20230323173547943"></p><p>网站链接<a href="https://duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion/">https://duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion/</a></p><p>大佬的文章<a href="https://ssrshare.github.io/2020/07/18/darkweb-56/">https://ssrshare.github.io/2020/07/18/darkweb-56/</a></p><p><img src= "/img/loading.gif" data-src="/image-20230323174619712.png" alt="image-20230323174619712"></p><p><img src= "/img/loading.gif" data-src="/image-20230323172432695.png" alt="image-20230323172432695"></p><p><img src= "/img/loading.gif" data-src="/image-20230323172438459.png" alt="image-20230323172438459"></p><p><img src= "/img/loading.gif" data-src="/image-20230323175328928.png" alt="image-20230323175328928"></p><p><img src= "/img/loading.gif" data-src="/image-20230323172622677.png" alt="image-20230323172622677"></p><h1 id="基础设置"><a href="#基础设置" class="headerlink" title="基础设置"></a>基础设置</h1><p><img src= "/img/loading.gif" data-src="/image-20230323172804143.png" alt="image-20230323172804143"></p><h2 id="证书"><a href="#证书" class="headerlink" title="证书"></a>证书</h2><p><img src= "/img/loading.gif" data-src="/image-20230323172844703.png" alt="image-20230323172844703"></p><h2 id="https-only"><a href="#https-only" class="headerlink" title="https-only"></a>https-only</h2><p><img src= "/img/loading.gif" data-src="/image-20230323172925825.png" alt="image-20230323172925825"></p><h2 id="链接方式"><a href="#链接方式" class="headerlink" title="链接方式"></a>链接方式</h2><p>配置代理服务器</p><p><img src= "/img/loading.gif" data-src="/image-20230323173040329.png" alt="image-20230323173040329"></p><p>网桥</p><p><a href="https://baike.baidu.com/item/%E7%BD%91%E6%A1%A5/99310">https://baike.baidu.com/item/%E7%BD%91%E6%A1%A5/99310</a></p><h3 id="可插拔传输类型"><a href="#可插拔传输类型" class="headerlink" title="可插拔传输类型"></a>可插拔传输类型</h3><p>目前您有三种可插拔传输器可用，但我们正在开发更多。</p><table><thead><tr><th>obfs4</th><th>obfs4 使 Tor 的流量看起来是随机的，并且还防止检查程序通过互联网扫描找到网桥。 与之前的 obfs3 网桥相比，obfs3 网桥被阻塞的可能性较小。</th></tr></thead><tbody><tr><td>meek</td><td>meek 方式使您看起来像在浏览主要网站，而不是使用 Tor。 meek-azure 使您看起来像在使用 Microsoft 网站。</td></tr><tr><td>Snowflake</td><td>Snowflake 是对 Flashproxy 的改进。 它通过 WebRTC 发送您的流量，WebRTC 是一种具有内置网络地址转换（NAT）穿透的对等（P2P）协议。</td></tr></tbody></table></blockquote>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>python个人学习路线总结</title>
       <link href="/posts/520530/"/>
       <url>/posts/520530/</url>
@@ -88,17 +127,6 @@
     
     
     <entry>
-      <title></title>
-      <link href="/manifest.json"/>
-      <url>/manifest.json</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>{"name":"我和我的猪猪","short_name":"我和我的猪猪","theme_color":"#3b70fc","background_color":"#3b70fc","display":"standalone","scope":"/","start_url":"/","icons":[{"src":"/img/siteicon/16.png","sizes":"16x16","type":"image/png"},{"src":"/img/siteicon/32.png","sizes":"32x32","type":"image/png"},{"src":"/img/siteicon/48.png","sizes":"48x48","type":"image/png"},{"src":"/img/siteicon/64.png","sizes":"64x64","type":"image/png"},{"src":"/img/siteicon/128.png","sizes":"128x128","type":"image/png"},{"src":"/img/siteicon/144.png","sizes":"144x144","type":"image/png"},{"src":"/img/siteicon/512.png","sizes":"512x512","type":"image/png"}],"splash_pages":null}]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>关于本站</title>
       <link href="/about/index.html"/>
       <url>/about/index.html</url>
@@ -110,9 +138,20 @@
     
     
     <entry>
-      <title>留言板</title>
-      <link href="/contact/index.html"/>
-      <url>/contact/index.html</url>
+      <title></title>
+      <link href="/manifest.json"/>
+      <url>/manifest.json</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>{"name":"我和我的猪猪","short_name":"我和我的猪猪","theme_color":"#3b70fc","background_color":"#3b70fc","display":"standalone","scope":"/","start_url":"/","icons":[{"src":"/img/siteicon/16.png","sizes":"16x16","type":"image/png"},{"src":"/img/siteicon/32.png","sizes":"32x32","type":"image/png"},{"src":"/img/siteicon/48.png","sizes":"48x48","type":"image/png"},{"src":"/img/siteicon/64.png","sizes":"64x64","type":"image/png"},{"src":"/img/siteicon/128.png","sizes":"128x128","type":"image/png"},{"src":"/img/siteicon/144.png","sizes":"144x144","type":"image/png"},{"src":"/img/siteicon/512.png","sizes":"512x512","type":"image/png"}],"splash_pages":null}]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>书单</title>
+      <link href="/books/index.html"/>
+      <url>/books/index.html</url>
       
         <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>]]></content>
       
@@ -132,9 +171,9 @@
     
     
     <entry>
-      <title>书单</title>
-      <link href="/books/index.html"/>
-      <url>/books/index.html</url>
+      <title>番剧列表</title>
+      <link href="/bangumis/index.html"/>
+      <url>/bangumis/index.html</url>
       
         <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>]]></content>
       
@@ -143,9 +182,9 @@
     
     
     <entry>
-      <title>番剧列表</title>
-      <link href="/bangumis/index.html"/>
-      <url>/bangumis/index.html</url>
+      <title>留言板</title>
+      <link href="/contact/index.html"/>
+      <url>/contact/index.html</url>
       
         <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>]]></content>
       
@@ -198,6 +237,17 @@
     
     
     <entry>
+      <title>Music</title>
+      <link href="/music/index.html"/>
+      <url>/music/index.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=450 src="//music.163.com/outchain/player?type=0&id=2693598459&auto=0&height=430"></iframe>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>标签</title>
       <link href="/tags/index.html"/>
       <url>/tags/index.html</url>
@@ -214,17 +264,6 @@
       <url>/talk/index.html</url>
       
         <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Music</title>
-      <link href="/music/index.html"/>
-      <url>/music/index.html</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=450 src="//music.163.com/outchain/player?type=0&id=2693598459&auto=0&height=430"></iframe>]]></content>
       
     </entry>
     
