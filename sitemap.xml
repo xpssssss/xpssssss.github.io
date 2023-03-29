@@ -2,27 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://xpssssss.github.io/posts/0/</loc>
+    <loc>http://xpssssss.github.io/posts/520520/</loc>
     
     <lastmod>2023-03-29</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://xpssssss.github.io/posts/0/</loc>
-    
-    <lastmod>2023-03-27</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://xpssssss.github.io/posts/0/</loc>
-    
-    <lastmod>2023-03-23</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -83,6 +65,15 @@
   </url>
   
   <url>
+    <loc>http://xpssssss.github.io/bangumis/index.html</loc>
+    
+    <lastmod>2023-01-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://xpssssss.github.io/books/index.html</loc>
     
     <lastmod>2023-01-28</lastmod>
@@ -93,15 +84,6 @@
   
   <url>
     <loc>http://xpssssss.github.io/categories/index.html</loc>
-    
-    <lastmod>2023-01-28</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://xpssssss.github.io/bangumis/index.html</loc>
     
     <lastmod>2023-01-28</lastmod>
     
@@ -128,7 +110,7 @@
   </url>
   
   <url>
-    <loc>http://xpssssss.github.io/movies/index.html</loc>
+    <loc>http://xpssssss.github.io/music/index.html</loc>
     
     <lastmod>2023-01-28</lastmod>
     
@@ -137,7 +119,7 @@
   </url>
   
   <url>
-    <loc>http://xpssssss.github.io/music/index.html</loc>
+    <loc>http://xpssssss.github.io/movies/index.html</loc>
     
     <lastmod>2023-01-28</lastmod>
     
@@ -188,6 +170,13 @@
   
   <url>
     <loc>http://xpssssss.github.io/tags/blog/</loc>
+    <lastmod>2023-03-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://xpssssss.github.io/tags/%E6%88%91%E7%88%B1%E4%BD%A0/</loc>
     <lastmod>2023-03-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
